@@ -1,0 +1,32 @@
+<section>
+    <div class="container mt-5">
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-header bg-primary text-white py-3 rounded-top-4">
+                <h2 class="mb-0">👥 User Management</h2>
+            </div>
+            <div class="card-body p-4 bg-light">
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label fw-bold">User Name</label>
+                        <input type="text" [(ngModel)]='newUser.name' class="form-control form-control-lg" id="username"
+                            placeholder="Enter user name" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userrole" class="form-label fw-bold">User Role</label>
+                        <select id="userrole" class="form-select form-select-lg" [(ngModel)]="newUser.role"
+                            name="userrole">
+                            <option value="" disabled selected>Select role</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                             <option value="moderator">Moderator</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg w-100 mt-3 shadow-sm" (click)=" sendUser()">
+                        <i class="bi bi-person-plus-fill me-2"></i> Add User
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

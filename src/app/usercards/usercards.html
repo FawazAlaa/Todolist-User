@@ -1,0 +1,22 @@
+<section class="container mt-5">
+    <h2 class="mb-4">User Cards</h2>
+    <div class="row g-4">
+        <div class="col-md-4" *ngFor="let user of users">
+
+            <div class="card shadow rounded-4 border-0 w-100 h-100">
+                <img src="Profile photo.jpg" class="card-img-top rounded-top-4" alt="User photo">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">{{ user.name }}</h5>
+                    <div class="alert mb-0 text-capitalize py-2" [ngClass]="{
+       'alert-danger': user.role === 'admin',
+       'alert-success': user.role === 'user',
+       'alert-warning': user.role === 'moderator'
+     }">
+                        {{ user.role }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

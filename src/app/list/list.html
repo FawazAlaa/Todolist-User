@@ -1,0 +1,15 @@
+<section class="todo-list">
+    <div class="todo-list_content">
+        <p>let's get some work done!</p>
+        <h2>TodoList</h2>
+        <ul>
+            @for (task of taskarr ; track task){
+                 <li> {{task.title}}</li>
+                 <button (click)="updateTask(task)">update</button>
+                 <button>done</button>
+            }
+
+           <!-- (click)="sendTask(task)" -->
+        </ul>
+    </div>
+</section>

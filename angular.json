@@ -27,8 +27,12 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.scss"
-            ]
+    
+            ],
+             "baseHref": "/Todolist-User/"
           },
           "configurations": {
             "production": {
@@ -87,5 +91,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "699550af-5b30-4c9d-ae10-bd4859ab0c06"
   }
 }
